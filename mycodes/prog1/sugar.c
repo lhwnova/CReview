@@ -1,5 +1,5 @@
 // global variables
-//
+// 
 
 
 #include <stdio.h>
