@@ -1,4 +1,4 @@
-// arithmetic number recision 
+// arithmetic number precision 
 
 #include <stdio.h>
 
