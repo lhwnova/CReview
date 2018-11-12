@@ -1,3 +1,8 @@
+gcc 
+ - "-Wall" show all warnings
+ - "lm" for math.h
+ - "-g" for gdb
+
 prog1
 - variable
 - data type
@@ -7,9 +12,11 @@ prog2
 - function 
 - pointers
 
-prog2 
+prog3 
 - condition statement
  - if/else
  - switch statement
  - pointer and address
 
+prog4
+ - loop
