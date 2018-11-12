@@ -11,5 +11,5 @@ prog2
 - condition statement
  - if/else
  - switch statement
-
+ - pointer and address
 
