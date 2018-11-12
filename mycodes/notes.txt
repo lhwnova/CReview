@@ -1,0 +1,15 @@
+prog1
+- variable
+- data type
+- scanf and printf
+
+prog2 
+- function 
+- pointers
+
+prog2 
+- condition statement
+ - if/else
+ - switch statement
+
+
