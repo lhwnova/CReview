@@ -19,4 +19,17 @@ prog3
  - pointer and address
 
 prog4
- - loop
+- loop - do/while, for, while
+- scanf feature
+- float.h constant - DBL_MAX
+
+prog5 
+- 
+
+
+
+ 
+
+
+
+ 
