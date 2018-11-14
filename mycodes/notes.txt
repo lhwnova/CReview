@@ -24,7 +24,14 @@ prog4
 - float.h constant - DBL_MAX
 
 prog5 
-- 
+- char arrary
+- parsing
+- ctype.h isalpha 
+- insertion sort
+- binsary search
+- reading in file
+
+
 
 
 
