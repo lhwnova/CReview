@@ -1,0 +1,11 @@
+Enter the colors of the resistor's three bands, beginning with
+the band nearest the end.  Type the colors in lower case letters
+only, NO CAPS.
+Band 1 => Band 2 => Band 3 => Resistance value:  500 kilo-ohms
+Do you want to decode another resistor?
+=> Enter the colors of the resistor's three bands, beginning with
+the band nearest the end.  Type the colors in lower case letters
+only, NO CAPS.
+Band 1 => Band 2 => Band 3 => Invalid color: vilot
+Do you want to decode another resistor?
+=> 

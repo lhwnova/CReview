@@ -1,0 +1,10 @@
+Filename: Total words: 44  Unique words: 29  Unique's size: 40
+Length Count
+   1      2
+   2      6
+   3      2
+   4      6
+   5      9
+   6     13
+   7      4
+   8      2

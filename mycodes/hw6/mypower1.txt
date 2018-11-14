@@ -1,0 +1,7 @@
+Filename: 0 1 1 1 
+1 1 0 1 
+1 1 1 1 
+
+Power is off in sectors:
+      (0,0)
+      (1,2)
