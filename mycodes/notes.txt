@@ -31,7 +31,10 @@ prog5
 - binsary search
 - reading in file
 
-
+prog6
+- string 
+- strcmp
+- dynamic memery - malloc
 
 
 
