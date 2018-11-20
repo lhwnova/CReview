@@ -35,6 +35,11 @@ prog6
 - string 
 - strcmp
 - dynamic memery - malloc
+- parsing file 
+- ctype 
+
+prog7
+-
 
 
 
