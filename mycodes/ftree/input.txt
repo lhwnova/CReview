@@ -1,0 +1,9 @@
+family.out smith.ged
+1
+Edwin
+2
+Martin Smith
+2
+Edwin
+0
+

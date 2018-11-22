@@ -1,0 +1,1 @@
+Usage: family.out <ged_filname>

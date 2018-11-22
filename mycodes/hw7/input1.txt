@@ -1,0 +1,10 @@
+family.out
+family.out smith.ged smith.ged
+family.out nofile.ged
+family.out smith.ged
+Edwin Micheal Smith
+Jefferson, Elna
+Hanna Smith
+Astrid Smith
+Betys Jones
+Done
