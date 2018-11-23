@@ -49,9 +49,14 @@ prog7
 - Makefile
 - GEDCOM file
 
+scanf() - can specify pattern, can cause buffer overflow
+fget() - 
+fgets() - specify buffer size and read in one line from file
+
 prog8
-
-
+- strncpy() - specify copy size
+- binary file 
+- fseek(), fread(), fwrite()
 
 
 

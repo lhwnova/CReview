@@ -1,8 +1,4 @@
 // Author: Sean Davis
-
-#include <stdio.h>
-// Author: Sean Davis
-
 #include <stdio.h>
 
 typedef struct 
