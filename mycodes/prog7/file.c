@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "file.h"
+#include "vector.h"
 
 
 FILE* count_records(const char* filename, int *individualCount, int *familyCount){
@@ -45,15 +46,15 @@ void read_file(char **indIDs, char **names, char **spouseIDs, char **childIDs,
   char *ptr, line[256];
 
   ptr = fgets(line, 256, filePtr);
-
+  //printf("hello here\n");
   while(ptr){
  
     if(strstr(line, "INDI")){
       ptr = read_indi(indIDs, names, &ind_count, line, filePtr);
-
+      
     }else if(strstr(line, "FAM")){
       ptr = read_family(spouseIDs, childIDs, &fam_count, line, filePtr);
-
+      //printf("here\n");
     }else{
       ptr = read_other(line, filePtr);
     }
@@ -64,51 +65,60 @@ void read_file(char **indIDs, char **names, char **spouseIDs, char **childIDs,
 
 char* get_ID(char *line){
   
-  char *ptr = strchar(line, '@');
-  *ptr = '\0';
-  ptr = strchar(line, '@');
+  char *ptr;
 
-  return ptr + 1;
-
+  ptr = strtok(line, "@");
+  ptr = strtok(NULL, "@");
+  //printf("line: %s\n", line);
+  //printf(">>%s\n", ptr);
+  
+  return ptr;
+  
 }
 
 
 char* read_indi(char **indIDs, char **names, int *ind_count, char *line, FILE *fp){
 
 
-  char name[80];
+  char name[81], temp[80];
   char *ptr;
+  
+  //puts(get_ID(line));
 
-  strcpy(indIDs[*ind_count], get_ID[line]);
- 
-  ptr = fgets(line, 1000, fp);
+  strcpy(indIDs[*ind_count], get_ID(line));
+  
+  ptr = fgets(line, 256, fp);
 
+  //printf("here\n");
   while(ptr != NULL && line[0] != '0'){
     
     ptr = strstr(line, "NAME");
-
+     
     if(ptr != NULL){
       strtok(ptr, " /");
-      name[0] = '\0';
+      temp[0] = '\0';
       ptr = strtok(NULL, " /\n");
-
+      
       if(ptr){
-        strcpy(name, ptr);
+        strcpy(temp, ptr);
       }
       
       ptr = strtok(NULL, " /\n");
       while(ptr != NULL){
-        sprintf(name, "%s %s", name, ptr);
+
+        sprintf(name, "%s %s", temp, ptr);
+        //strcpy(name, temp);
         ptr = strtok(NULL, " /\n"); 
       }
-
+      
       names[*ind_count] = (char*)malloc(strlen(name) + 1);
-      *ind_count = *ind_count + 1;
       strcpy(names[*ind_count], name);
+
+      *ind_count = *ind_count + 1;
       
     } 
 
-    ptr = fgets(line, 1000, fp); 
+    ptr = fgets(line, 256, fp); 
   }
 
   return ptr;
@@ -117,21 +127,28 @@ char* read_indi(char **indIDs, char **names, int *ind_count, char *line, FILE *f
 
 char* read_family(char **spouseIDs, char **childIDs, int *fam_count, char *line, FILE *fp){
   
-  char *ptr, *temp;
+  char *ptr, *temp, *tvar;
 
-  ptr = fgets(line, 1000, fp);
+  ptr = fgets(line, 256, fp);
 
   while(ptr != NULL && line[0] != '0'){
     
     if(strstr(line, "HUSB") || strstr(line, "WIFE")){
-      sprintf(spouseIDs[*fam_count], "%s %s", spouseIDs[*fam_count], get_ID(line));
+      //printf(">>%s\n", get_ID(line));
+      //printf(">>%s\n", spouseIDs[*fam_count]);
+      //strcat(spouseIDs[*fam_count], get_ID(line));
+      tvar = spouseIDs[*fam_count];
+      sprintf(spouseIDs[*fam_count], "%s %s", tvar, get_ID(line));
+      //printf(">>%s\n", spouseIDs[*fam_count]);
+      //strcpy(spouseIDs[*fam_count], tvar);      
+      
     }
-
+    
     if(strstr(line, "CHIL")){
       ptr = get_ID(line);
 
       if(childIDs[*fam_count]){
-        temp = (char*) malloc(childIDs[*fam_count] + strlen(ptr) + 2);
+        temp = (char*) malloc(strlen(childIDs[*fam_count]) + strlen(ptr) + 2);
         sprintf(temp, "%s %s", childIDs[*fam_count], ptr);
         free(childIDs[*fam_count]);
         childIDs[*fam_count] = temp;
@@ -146,7 +163,7 @@ char* read_family(char **spouseIDs, char **childIDs, int *fam_count, char *line,
     }
 
 
-    ptr = fgets(line, 1000, fp); 
+    ptr = fgets(line, 256, fp); 
 
   }
 

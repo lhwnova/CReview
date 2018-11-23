@@ -39,7 +39,21 @@ prog6
 - ctype 
 
 prog7
--
+- triple pointer
+- sprintf()  
+- fgets() vs scanf()
+- circular reference #ifndef #define #endif
+- macro variable in .h file 
+- make clean, make name.o (make individual object file)
+- strstr(), strcmp(), strcpy(), strtok(), strchr(), strrchr(), strlen()
+- Makefile
+- GEDCOM file
+
+prog8
+
+
+
+
 
 
 

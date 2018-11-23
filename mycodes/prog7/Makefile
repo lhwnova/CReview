@@ -1,10 +1,10 @@
 family.out: main.o file.o vector.o search.o
 	gcc -Wall -g -o family.out main.o file.o vector.o search.o
 
-file.o: file.c file.h
+file.o: file.c file.h vector.h
 	gcc -Wall -g -c file.c
 
-main.o: main.c file.h vector.h
+main.o: main.c file.h vector.h 
 	gcc -Wall -g -c main.c
 
 vector.o: vector.c vector.h

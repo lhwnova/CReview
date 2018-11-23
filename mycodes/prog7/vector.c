@@ -22,7 +22,7 @@ void initialize(char ***indIDs, char ***names, char ***spouseIDs,
 
   for(i = 0; i < famCount; i++){
     (*spouseIDs)[i] = (char*)malloc(SPOUSE_SIZE*sizeof(char)); 
-    (*spouseIDs)[0] = '\0';
+    //(*spouseIDs)[0] = '\0';
     (*childIDs)[i] = NULL;
 
   }
