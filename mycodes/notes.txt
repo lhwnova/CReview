@@ -58,9 +58,10 @@ prog8
 - strncpy() - specify copy size
 - binary file 
 - fseek(), fread(), fwrite()
-- struct 
+- struct and pointer
 - pass by reference
-
+- pass function
+-  
 
 
 
