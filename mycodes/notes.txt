@@ -48,6 +48,7 @@ prog7
 - strstr(), strcmp(), strcpy(), strtok(), strchr(), strrchr(), strlen()
 - Makefile
 - GEDCOM file
+- pass by reference
 
 scanf() - can specify pattern, can cause buffer overflow
 fget() - 
@@ -57,6 +58,8 @@ prog8
 - strncpy() - specify copy size
 - binary file 
 - fseek(), fread(), fwrite()
+- struct 
+- pass by reference
 
 
 
