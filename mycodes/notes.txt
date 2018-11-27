@@ -63,8 +63,13 @@ prog8
 - pass function
 -  
 
+exit(1);
+exit(0);
 
 
+prog9
+- recurssion
+- maze and binary print out
 
  
 
